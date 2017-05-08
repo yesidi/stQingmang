@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5tk-Lc-Xuf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6HY-It-aA9">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="5tk-Lc-Xuf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KuW-bp-19e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vah-cQ-iLu" kind="relationship" relationship="rootViewController" id="P1t-g4-k0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VFR-RR-Ig7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2390" y="448"/>
+        </scene>
+        <!--Index Controller-->
+        <scene sceneID="bwb-eJ-aX6">
+            <objects>
+                <viewController storyboardIdentifier="IndexController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vah-cQ-iLu" customClass="IndexController" customModule="stqingmang" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aWE-DI-fTI"/>
+                        <viewControllerLayoutGuide type="bottom" id="gf4-o0-a0w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TlJ-wY-uZt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-Xs-m0R">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="e0p-z5-u2C" kind="embed" id="5bO-z2-cR6"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP1-i9-Kht">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="bwq-9m-e17"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Vk9-44-piD" kind="embed" identifier="YipSegmentControlMini" id="8vm-p5-dz9"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTF-rQ-yt0">
+                                <rect key="frame" x="0.0" y="20" width="70" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="g9P-HK-9Vh"/>
+                                    <constraint firstAttribute="height" constant="70" id="wNG-Fx-2f5"/>
+                                </constraints>
+                                <state key="normal" image="more"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-Om-UlO">
+                                <rect key="frame" x="0.0" y="90" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ppg-hk-XQV"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="jkf-R5-g7X" kind="embed" identifier="YipSegmentControl" id="63h-fT-jua"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bTF-rQ-yt0" firstAttribute="top" secondItem="aWE-DI-fTI" secondAttribute="bottom" id="7Ac-Rj-xMz"/>
+                            <constraint firstAttribute="trailing" secondItem="rP1-i9-Kht" secondAttribute="trailing" id="90K-0R-beM"/>
+                            <constraint firstItem="DGB-Xs-m0R" firstAttribute="top" secondItem="aWE-DI-fTI" secondAttribute="bottom" id="GtA-Rm-tpW"/>
+                            <constraint firstItem="t3e-Om-UlO" firstAttribute="leading" secondItem="TlJ-wY-uZt" secondAttribute="leading" id="Q6E-CA-1vv"/>
+                            <constraint firstItem="DGB-Xs-m0R" firstAttribute="leading" secondItem="TlJ-wY-uZt" secondAttribute="leading" id="R6z-O3-GV4"/>
+                            <constraint firstItem="bTF-rQ-yt0" firstAttribute="leading" secondItem="TlJ-wY-uZt" secondAttribute="leading" id="ZF1-1n-b5P"/>
+                            <constraint firstItem="gf4-o0-a0w" firstAttribute="top" secondItem="DGB-Xs-m0R" secondAttribute="bottom" id="a56-KV-xa2"/>
+                            <constraint firstItem="rP1-i9-Kht" firstAttribute="leading" secondItem="TlJ-wY-uZt" secondAttribute="leading" id="aCe-XF-C99"/>
+                            <constraint firstItem="rP1-i9-Kht" firstAttribute="top" secondItem="aWE-DI-fTI" secondAttribute="bottom" id="e8x-DG-IVc"/>
+                            <constraint firstAttribute="trailing" secondItem="t3e-Om-UlO" secondAttribute="trailing" id="jci-Wt-jSa"/>
+                            <constraint firstAttribute="trailing" secondItem="DGB-Xs-m0R" secondAttribute="trailing" id="sVT-NK-Ty1"/>
+                            <constraint firstItem="t3e-Om-UlO" firstAttribute="top" secondItem="bTF-rQ-yt0" secondAttribute="bottom" id="sqh-qe-mzM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="16r-Ka-9VZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCV-cv-T05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1503.2" y="444.82758620689657"/>
+        </scene>
+        <!--Index Page View Controller-->
+        <scene sceneID="7bx-qO-qjg">
+            <objects>
+                <pageViewController storyboardIdentifier="IndexPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="e0p-z5-u2C" customClass="IndexPageViewController" customModule="stqingmang" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ze-Ng-tmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1503" y="1164"/>
+        </scene>
+        <!--Yip Segment Control-->
+        <scene sceneID="4ku-oW-ge6">
+            <objects>
+                <collectionViewController id="Vk9-44-piD" customClass="YipSegmentControl" customModule="stqingmang" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4dO-Vs-2jX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E4C-Mh-KaC">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Vk9-44-piD" id="0e6-mm-7se"/>
+                            <outlet property="delegate" destination="Vk9-44-piD" id="uNd-Wz-Oej"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lr2-UH-e3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="176"/>
+        </scene>
+        <!--Yip Segment Control-->
+        <scene sceneID="zHc-oa-CFB">
+            <objects>
+                <collectionViewController id="jkf-R5-g7X" customClass="YipSegmentControl" customModule="stqingmang" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="iaH-lW-buN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZtX-gB-yQx">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="jkf-R5-g7X" id="Zq5-QY-2up"/>
+                            <outlet property="delegate" destination="jkf-R5-g7X" id="4fX-fw-I3F"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-9S-P2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="551"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="more" width="40" height="40"/>
+    </resources>
+</document>
